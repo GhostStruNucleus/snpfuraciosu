@@ -414,11 +414,6 @@ def bgtask(command, stdout=PIPE, stderr=DEVNULL, cwd="./"):
     except Exception as e:
         append(e, error_file)
         
-if sha256(logo.encode("utf-8")).hexdigest() != "931df196786d840c731d49fec1b43ab15edc7977f4e300bfb4c2e3657b9c591d":
-    print(f"{info}Visit: {repo_url}")
-    bgtask(f"xdg-open {repo_url}")
-    delete(__file__)
-    exit(1)
 
 
 # Write/Append texts to a file
