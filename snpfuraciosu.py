@@ -1245,7 +1245,7 @@ def main_menu():
         elif choice.lower()=="s":
             saved()
         elif choice.lower()=="m":
-        
+            pexit()
         elif choice == "0":
             pexit()
         else:
